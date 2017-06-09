@@ -6,6 +6,8 @@ npm install.
 npm run build.
 npm start
 
+Abrir: http://localhost:3000/
+
 PT-BR
 
 ## Requisitos
