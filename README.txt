@@ -1,5 +1,11 @@
 # Walmart Front-End Recruitment Test
 
+Para Fazer Build do Projeto:
+
+npm install.
+npm run build.
+npm start
+
 PT-BR
 
 ## Requisitos
