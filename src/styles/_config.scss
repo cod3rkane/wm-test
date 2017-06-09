@@ -1,0 +1,37 @@
+@charset 'UTF-8';
+
+/// Mapa dos tamanhos de fontes utilizadas
+/// @group    Fontes
+$font-sizes: (
+        xxbig: 48px,
+        xbig: 30px,
+        big: 24px,
+        medium: 16px,
+        small: 14px,
+        xsmall: 12px
+) !default;
+
+/// Mapa dos tamanhos para as media queries
+/// Começa de 0 até a medida especificada no breakpoint [mobile first]
+/// @group    Breakpoints
+$breakpoints: (
+        small   : 641px,
+        medium  : 769px,
+        large   : 1025px,
+        xlarge  : 1321px,
+        xxlarge : 1921px
+) !default;
+
+/// Mapa dos tamanhos dos espaçamentos
+/// @group Spaces
+$spaces: (
+        p    : 8px,
+        base : 16px,
+        m    : 24px,
+        g    : 32px,
+        gg   : 48px,
+        xg   : 56px
+) !default;
+
+/// @group    Variáveis
+$input-exception: ':not([type="checkbox"]):not([type="radio"]):not([type="file"])';

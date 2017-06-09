@@ -1,0 +1,108 @@
+.card-item {
+  width: 100%;
+  max-width: 412px;
+  margin: 16px 0;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+    .card-footer .card-action, .card-brand {
+      opacity: 1;
+    }
+  }
+
+  .card {
+    border: 1px solid #dddddd;
+    background-color: #fff;
+  }
+
+  .card-content {
+    padding: 11px;
+  }
+
+  .card-header {
+    text-align: center;
+
+    a {
+      color: #2196f3;
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  .card-footer {
+    border-top: 1px solid #dddddd;
+    position: relative;
+
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 2px 8px;
+
+      span {
+        display: block;
+      }
+    }
+
+    .price-old {
+      color: #a0a0a0;
+      text-decoration: line-through;
+      font-size: 12px;
+    }
+
+    .price-curr {
+      color: #43af43;
+      font-size: 17px;
+      line-height: 21px;
+    }
+
+    .installment {
+      color: #a0a0a0;
+      font-size: 12px;
+    }
+
+    .card-action {
+      width: 62px;
+      height: 55px;
+      background-color: #4caf50;
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      text-align: left;
+
+      span {
+        background: url(//static.wmobjects.com.br/webstore/images/sprites/global-s259a53528f.png) no-repeat;
+        background-position: 0 -5508px;
+        display: block;
+        position: relative;
+        width: 28px;
+        height: 22px;
+        margin: 16px auto;
+      }
+    }
+  }
+
+  .card-brand {
+    background-color: #ececec;
+    padding: 4px;
+    text-align: center;
+    opacity: 0;
+
+    a {
+      color: #2196f3;
+      text-decoration: none;
+    }
+  }
+}
