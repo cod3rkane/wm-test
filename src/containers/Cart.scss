@@ -49,6 +49,10 @@
     width: 100%;
     top: 57px;
     
+    &.show {
+      display: block;
+    }
+    
     .cart-main {
       height: 48px;
       border-bottom: 1px solid #dcdbdb;

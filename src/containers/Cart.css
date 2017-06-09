@@ -35,6 +35,8 @@
     position: fixed;
     width: 100%;
     top: 57px; }
+    .cart .container.show {
+      display: block; }
     .cart .container .cart-main {
       height: 48px;
       border-bottom: 1px solid #dcdbdb;

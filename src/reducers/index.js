@@ -18,6 +18,7 @@ function cartReducer(state = defaultState, action) {
         case CART_REMOVE_ACTION:
             newState = Object.assign([], state);
             newState.splice(action.id, 1);
+            saveStorage(newState);
             return newState;
             break;
         default:

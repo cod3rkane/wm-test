@@ -13,6 +13,13 @@ class Cart extends Component {
         children: PropTypes.node,
         removeItemCart: PropTypes.func.isRequired
     }
+    
+    constructor() {
+        super();
+        this.state = {
+            cart: false,
+        }
+    }
 
     render() {
         const { cartItems, removeItemCart } = this.props;
@@ -20,11 +27,11 @@ class Cart extends Component {
         
         return (
             <div className="cart">
-                <a href="">
+                <a onClick={this.onOpen.bind(this)}>
                     <span className="number">{cartItems.length}</span>
                     <span className="cart-icon"></span>
                 </a>
-                <div className="container">
+                <div className={'container ' + (this.state.cart ? 'show' : "")}>
                     <div className="cart-main">
                         <h2>Meu carrinho ({cartItems.length} {strItens})</h2>
                     </div>
@@ -34,6 +41,12 @@ class Cart extends Component {
                 </div>
             </div>
         )
+    }
+    
+    onOpen() {
+        this.setState({
+            cart: !this.state.cart,
+        });
     }
 }
 
