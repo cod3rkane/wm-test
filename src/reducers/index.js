@@ -1,56 +1,37 @@
-import * as ActionTypes from '../actions'
-import merge from 'lodash/merge'
-import paginate from './paginate'
-import { routerReducer as routing } from 'react-router-redux'
-import { combineReducers } from 'redux'
+import { CART_ADD_ACTION, CART_REMOVE_ACTION } from '../actions/index';
+import { combineReducers } from 'redux';
+import { routerReducer as routing } from 'react-router-redux';
 
-// Updates an entity cache in response to any action with response.entities.
-const entities = (state = { users: {}, repos: {} }, action) => {
-  if (action.response && action.response.entities) {
-    return merge({}, state, action.response.entities)
-  }
+let storage = JSON.parse(localStorage.getItem('cart'));
 
-  return state
+const defaultState = storage || [];
+
+function cartReducer(state = defaultState, action) {
+    let newState = [];
+    switch (action.type) {
+        case CART_ADD_ACTION:
+            newState = Object.assign([], state);
+            newState.push(action.item);
+            saveStorage(newState);
+            return newState;
+            break;
+        case CART_REMOVE_ACTION:
+            newState = Object.assign([], state);
+            newState.splice(action.id, 1);
+            return newState;
+            break;
+        default:
+            return state;
+    }
 }
 
-// Updates error message to notify about the failed fetches.
-const errorMessage = (state = null, action) => {
-  const { type, error } = action
-
-  if (type === ActionTypes.RESET_ERROR_MESSAGE) {
-    return null
-  } else if (error) {
-    return error
-  }
-
-  return state
+function saveStorage(items) {
+    localStorage.setItem('cart', JSON.stringify(items));
 }
-
-// Updates the pagination data for different actions.
-const pagination = combineReducers({
-  starredByUser: paginate({
-    mapActionToKey: action => action.login,
-    types: [
-      ActionTypes.STARRED_REQUEST,
-      ActionTypes.STARRED_SUCCESS,
-      ActionTypes.STARRED_FAILURE
-    ]
-  }),
-  stargazersByRepo: paginate({
-    mapActionToKey: action => action.fullName,
-    types: [
-      ActionTypes.STARGAZERS_REQUEST,
-      ActionTypes.STARGAZERS_SUCCESS,
-      ActionTypes.STARGAZERS_FAILURE
-    ]
-  })
-})
 
 const rootReducer = combineReducers({
-  entities,
-  pagination,
-  errorMessage,
-  routing
-})
+    cartReducer,
+    routing
+});
 
-export default rootReducer
+export default rootReducer;

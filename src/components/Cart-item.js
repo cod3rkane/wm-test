@@ -1,9 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CartItem = ({item, qtd}) => {
-    const { title, image } = item;
+import './CartItem.css';
 
+const CartItem = ({item, id, onClickRemove}) => {
+    const { title, image } = item;
+    
+    function onRemove() {
+        onClickRemove(item, id);
+    }
+    
     return (
         <div className="cart-item">
             <div>
@@ -13,10 +19,11 @@ const CartItem = ({item, qtd}) => {
             </div>
             <div>
                 <a href="">
-                    {title}
+                    {title.substr(0, 40)}...
                 </a>
-                <span>Quantidade: {qtd}</span>
+                <span>Quantidade: 1</span>
             </div>
+            <span className="close" onClick={onRemove.bind(this)}>x</span>
         </div>
     );
 };
@@ -34,7 +41,8 @@ CartItem.propTypes = {
         rating: PropTypes.number,
         installments: PropTypes.array.isRequired
     }).isRequired,
-    qtd: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
+    onClickRemove: PropTypes.func.isRequired
 };
 
 export default CartItem;

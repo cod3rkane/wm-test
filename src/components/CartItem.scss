@@ -1,0 +1,46 @@
+@import '../styles/config';
+@import '../styles/functions/clean-units';
+@import '../styles/functions/converter';
+
+@import '../styles/tools/responsive';
+
+.cart-item {
+  width: 100%;
+  height: 110px;
+  border-bottom: 1px solid #dcdbdb;
+  position: relative;
+  padding-top: 22px;
+  
+  .close {
+    color: red;
+    font-weight: 500;
+    font-size: 32px;
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    cursor: pointer;
+  }
+  
+  > div {
+    display: inline-block;
+    width: 66%;
+    vertical-align: middle;
+    
+    &:first-child {
+      width: 30%;
+    }
+    
+    a {
+      display: block;
+      color: #2196f3;
+      text-decoration: none;
+    }
+  }
+  
+  figure {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

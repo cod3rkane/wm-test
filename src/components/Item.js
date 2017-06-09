@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 
 import './Item.css';
 
-const Item = ({item}) => {
+const Item = ({item, clickCart}) => {
     const { title, image, listPrice, price, installments, brand, currency } = item;
     const im = installments[installments.length - 1];
+    
+    function onClickCart() {
+        clickCart(item);
+    }
 
     return (
         <div className="card-item">
@@ -33,7 +37,7 @@ const Item = ({item}) => {
                         </span>
                         </p>
                     </a>
-                    <div className="card-action">
+                    <div className="card-action" onClick={onClickCart.bind(this)}>
                         <span> </span>
                     </div>
                 </section>
@@ -57,7 +61,8 @@ Item.propTypes = {
         currency: PropTypes.string.isRequired,
         rating: PropTypes.number,
         installments: PropTypes.array.isRequired
-    }).isRequired
+    }).isRequired,
+    clickCart: PropTypes.func.isRequired
 };
 
 export default Item;
