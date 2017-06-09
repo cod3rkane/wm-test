@@ -93,6 +93,10 @@
       right: 0;
       cursor: pointer;
       text-align: left;
+      
+      @include responsive(medium) {
+        opacity: 0;
+      }
 
       span {
         background: url(//static.wmobjects.com.br/webstore/images/sprites/global-s259a53528f.png) no-repeat;

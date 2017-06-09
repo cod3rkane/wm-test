@@ -58,6 +58,9 @@
       right: 0;
       cursor: pointer;
       text-align: left; }
+      @media (min-width: 48.0625em) {
+        .card-item .card-footer .card-action {
+          opacity: 0; } }
       .card-item .card-footer .card-action span {
         background: url(//static.wmobjects.com.br/webstore/images/sprites/global-s259a53528f.png) no-repeat;
         background-position: 0 -5508px;
