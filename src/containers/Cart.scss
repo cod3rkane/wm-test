@@ -1,0 +1,62 @@
+@import '../styles/config';
+@import '../styles/functions/clean-units';
+@import '../styles/functions/converter';
+
+@import '../styles/tools/responsive';
+
+.cart {
+  height: 57px;
+
+  > a {
+    position: absolute;
+    right: 0;
+    display: block;
+    height: 100%;
+    width: 68px;
+    text-align: center;
+    background-color: #F6B428;
+    border-bottom: 1px solid #CD8D06;
+    border-right: 1px solid #E6A316;
+    border-left: 1px solid #FCD88B;
+  }
+
+  .cart-icon {
+    background: url(//static.wmobjects.com.br/webstore/images/sprites/global-s259a53528f.png) no-repeat;
+    margin-top: 17px;
+    background-position: 0 -3997px;
+    height: 26px;
+    width: 30px;
+    display: inline-block;
+  }
+
+  .number {
+    background-color: #C00;
+    border-radius: 0 0 0 2px;
+    color: #FFF;
+    display: inline-block;
+    font-size: 11px;
+    padding: 0 4px 2px 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .container {
+    background-color: #fff;
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 57px;
+    
+    .cart-main {
+      height: 48px;
+      border-bottom: 1px solid #dcdbdb;
+      padding: 22px 6px 6px;
+      
+      > h2 {
+        font-weight: 100;
+      }
+    }
+  }
+}

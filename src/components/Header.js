@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import Cart from '../containers/Cart';
 
 import './Header.css';
 
@@ -9,11 +10,8 @@ const Header = () => {
             <div className="logo">
                 <a href=""></a>
             </div>
-            <div className="cart">
-                <a href="">
-                    <span className="number">1</span>
-                    <span className="cart-icon"></span>
-                </a>
+            <div>
+                <Cart></Cart>
             </div>
         </nav>
     )

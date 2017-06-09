@@ -21,42 +21,4 @@
       margin: 8px 0 0 19px;
     }
   }
-
-  .cart {
-    height: 57px;
-    position: relative;
-    float: right;
-
-    a {
-      display: block;
-      height: 100%;
-      width: 68px;
-      text-align: center;
-      background-color: #F6B428;
-      border-bottom: 3px solid #CD8D06;
-      border-right: 1px solid #E6A316;
-      border-left: 1px solid #FCD88B;
-    }
-
-    .cart-icon {
-      background: url(//static.wmobjects.com.br/webstore/images/sprites/global-s259a53528f.png) no-repeat;
-      margin-top: 17px;
-      background-position: 0 -3997px;
-      height: 26px;
-      width: 30px;
-      display: inline-block;
-    }
-
-    .number {
-      background-color: #C00;
-      border-radius: 0 0 0 2px;
-      color: #FFF;
-      display: inline-block;
-      font-size: 11px;
-      padding: 0 4px 2px 5px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-  }
 }
