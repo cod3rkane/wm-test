@@ -1,0 +1,5 @@
+@media (min-width: 48.0625em) {
+  .item-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; } }

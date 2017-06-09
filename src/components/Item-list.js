@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Item from './Item';
 
+import './ItemList.css';
+
 export default class ItemList extends Component {
     static propTypes = {
         items: PropTypes.array.isRequired

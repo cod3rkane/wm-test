@@ -13,7 +13,7 @@ const Item = ({item}) => {
                 <div className="card-content">
                     <div className="card-header">
                         <a href="">
-                            <span>{title}</span>
+                            <span>{title.substr(0, 73)}...</span>
                         </a>
                     </div>
                     <figure>

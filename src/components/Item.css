@@ -1,7 +1,12 @@
 .card-item {
   width: 100%;
-  max-width: 412px;
+  max-width: 100%;
   margin: 16px 0; }
+  @media (min-width: 48.0625em) {
+    .card-item {
+      width: 412px;
+      margin: 2px;
+      align-self: stretch; } }
   .card-item:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
     .card-item:hover .card-footer .card-action, .card-item:hover .card-brand {

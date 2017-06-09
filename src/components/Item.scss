@@ -1,7 +1,19 @@
+@import '../styles/config';
+@import '../styles/functions/clean-units';
+@import '../styles/functions/converter';
+
+@import '../styles/tools/responsive';
+
 .card-item {
   width: 100%;
-  max-width: 412px;
+  max-width: 100%;
   margin: 16px 0;
+  
+  @include responsive(medium) {
+    width: 412px;
+    margin: 2px;
+    align-self: stretch;
+  }
 
   &:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);

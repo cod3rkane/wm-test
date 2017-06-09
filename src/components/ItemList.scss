@@ -1,0 +1,13 @@
+@import '../styles/config';
+@import '../styles/functions/clean-units';
+@import '../styles/functions/converter';
+
+@import '../styles/tools/responsive';
+
+.item-list {
+  @include responsive(medium) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
